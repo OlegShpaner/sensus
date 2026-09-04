@@ -1,0 +1,67 @@
+.container {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding-bottom: 4rem;
+}
+
+.greeting {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color-primary);
+}
+
+.nickname {
+  font-weight: 600;
+}
+
+.date {
+  color: var(--color-text-muted);
+  margin-top: 0.5rem;
+}
+
+.bigClock {
+  cursor: pointer;
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, var(--color-surface) 0%, #F3F4F6 100%);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.bigClock:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.clockLabel {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.clockValue {
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.clockSubValue {
+  font-size: 1.5rem;
+  color: var(--color-text-muted);
+  margin-top: -0.5rem;
+  font-weight: 300;
+}
+
+.journalPrompt {
+  margin-top: 1.5rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}

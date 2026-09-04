@@ -1,0 +1,115 @@
+.section {
+  text-align: center;
+  overflow: visible;
+}
+
+.label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+}
+
+.value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-top: 0.5rem;
+}
+
+.progressBarContainer {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background-color: rgba(212, 175, 55, 0.2);
+  border-radius: 3px;
+  border: 1px solid var(--color-border);
+}
+
+.progressFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--color-secondary);
+  border-radius: 3px;
+  transition: width 1s ease-out;
+}
+
+.progressMarker {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -85%);
+  transition: left 1s ease-out;
+  z-index: 10;
+}
+
+.markerImage {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  cursor: pointer;
+  filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2));
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modalCard {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.modalCloseBtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-text-muted);
+}
+
+.modalImage {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+}
+
+.modalTitle {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-family: 'Cinzel', serif;
+}
+
+.modalQuote {
+  font-style: italic;
+  color: var(--color-text-main);
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.modalAuthor {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  font-family: 'Cinzel', serif;
+}

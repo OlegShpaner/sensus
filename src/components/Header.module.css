@@ -1,0 +1,132 @@
+.header {
+  background: var(--color-surface);
+  border-bottom: 4px double var(--color-border);
+  padding: var(--space-4) 0;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  z-index: 1000;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.logoImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.profileContainer {
+  position: relative;
+}
+
+.profileButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.nickname {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Roman Banner Dropdown */
+.dropdownWrapper {
+  position: absolute;
+  top: 100%;
+  right: -10px;
+  margin-top: 0.5rem;
+  z-index: 1000;
+  filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.5));
+}
+
+.dropdown {
+  min-width: 160px;
+  background: linear-gradient(to bottom, #8a1c1c, #4a1117); /* Rich Tyrian red/purple */
+  border: 2px solid #D4AF37; /* Gold */
+  border-top: 8px solid #D4AF37; /* Thick crossbar */
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px; /* Extra padding for the swallowtail cut */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 20px), 0 100%);
+}
+
+.dropdownItem {
+  padding: 0.85rem 1rem;
+  text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fce8ad; /* Soft gold text */
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+}
+
+.dropdownItem:hover {
+  background: rgba(212, 175, 55, 0.15);
+  color: #fff;
+}
+
+/* Gold divider lines */
+.dropdownItem::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+}
+
+.dropdownItem:last-of-type::after {
+  display: none;
+}
+
+.dropdownLogout {
+  color: #ffcccc;
+}
+
+.dropdownLogout:hover {
+  color: #ff9999;
+}
